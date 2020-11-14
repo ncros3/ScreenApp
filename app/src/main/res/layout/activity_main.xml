@@ -49,23 +49,105 @@
         app:layout_constraintGuide_begin="539dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:text="Hiking & active Leisure"
+        android:text="Hiking and active Leisure"
+        android:textColor="#313651"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:text="74 Routes"
+        android:textColor="#313651"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+
+    <TextView
+        android:id="@+id/submenu1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:rotation="-90"
+        android:text="Popular"
+        android:textColor="#313651"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+    <TextView
+        android:id="@+id/submenu2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="left"
+        android:rotation="-90"
+        android:text="Mountain"
+        android:textColor="#313651"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/submenu1"
+        app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+    <TextView
+        android:id="@+id/submenu3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="left"
+        android:rotation="-90"
+        android:text="Cycling"
+        android:textColor="#313651"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/submenu2"
+        app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="68dp"
+        android:layout_height="290dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline11"
-        app:srcCompat="@drawable/Italia" />
+        app:layout_constraintTop_toTopOf="@+id/guideline11">
+
+        <ImageView
+            android:id="@+id/roundedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:src="@drawable/italia" />
+
+        <TextView
+            android:id="@+id/imageSubtitle"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="25dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text = "Rein\nin Taufers" />
+
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
